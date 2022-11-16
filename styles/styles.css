@@ -619,7 +619,7 @@ ul {
     width: 30px;
     height: 30px;
     background: #FFFFFF;
-    background-image: url(/images/close-black.png);
+    background-image: url(../images/close-black.png);
     background-repeat: no-repeat;
     background-position: center;  
     border: 1px solid rgba(0, 0, 0, 0.1);
