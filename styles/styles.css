@@ -549,6 +549,10 @@ ul {
     display: block;
 }
 
+.footer .social-link {
+    fill: #FFFFFF;
+}
+
 .links-conteiner > p {
     margin-bottom: 20px;
     font-weight: 700;
