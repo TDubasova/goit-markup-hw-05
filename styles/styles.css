@@ -19,13 +19,11 @@ body {
 a {
     text-decoration: none;
     cursor: auto;
-    transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a:hover,
 a:focus {
     cursor: pointer;
-    transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ul {
@@ -129,7 +127,7 @@ ul {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #2196F3;
+    background-color: var(--secondery-color);
     border-radius: 2px;
 }
 .contacts {
@@ -227,18 +225,14 @@ ul {
     align-items: center;
     letter-spacing: 0.06em;
     text-decoration: none;   
-    transition:
-        cursor 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .herou-button.active:hover,
 .herou-button.active:focus {
     cursor: pointer;
     background-color: #188CE8;
-    transition: 
-        cursor 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* особливості */
@@ -391,7 +385,7 @@ ul {
 .text-content {
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -440,7 +434,7 @@ ul {
 
 .social-link:hover,
 .social-link:focus {
-    background-color: #2196F3;
+    background-color: var(--secondery-color);
     fill: var(--background-color);
     transition:
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -550,7 +544,7 @@ ul {
 }
 
 .footer .social-link {
-    fill: #FFFFFF;
+    fill: var(--background-color);
 }
 
 .links-conteiner > p {
@@ -588,18 +582,23 @@ ul {
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     visibility: visible;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    transition:
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.9);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -611,7 +610,7 @@ ul {
     
     height: 581px;
     width: 528px;
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -623,11 +622,15 @@ ul {
     width: 30px;
     height: 30px;
     padding: 6px;
-    background: #FFFFFF;
-    fill: #000000;
+    background: var(--background-color);
+    fill: var(--logo-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close:hover {
+    cursor: pointer;
 }
 
 
@@ -667,13 +670,11 @@ ul {
     text-align: center;
     letter-spacing: 0.03em;
     border: none;
-    cursor: auto;
     box-shadow: none;
     transition:
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-btn:hover,
@@ -688,8 +689,7 @@ ul {
     transition:
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects {
@@ -709,12 +709,10 @@ ul {
 .project-link {
     display: inline-block;
     width: 370px;
-    cursor: auto;
     box-shadow: none;
-    transition:
-            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+           
 
 .project-link:hover,
 .project-link:focus {
@@ -722,10 +720,7 @@ ul {
         0px 1px 1px rgba(0, 0, 0, 0.12), 
         0px 4px 4px rgba(0, 0, 0, 0.06), 
         1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
-    transition:
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .img-thumb {
